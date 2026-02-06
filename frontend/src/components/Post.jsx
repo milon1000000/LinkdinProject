@@ -101,7 +101,7 @@ function Post({
   }, [like, comment]);
 
   return (
-    <div className="w-full min-h-[200px] bg-blue-500 rounded-lg shadow-lg p-[20px] flex flex-col gap-[10px]">
+    <div className="w-full min-h-[200px] bg-white rounded-lg shadow-lg p-[20px] flex flex-col gap-[10px]">
       <div className="flex justify-between items-center">
         <div className="flex justify-center items-start gap-[10px]">
           <div
