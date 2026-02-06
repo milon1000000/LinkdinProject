@@ -5,7 +5,7 @@ import { userDataContext } from "../context/UserContext";
 import io from "socket.io-client";
 import { useNavigate } from "react-router-dom";
 
-const socket = io("https://linkedin-backend-fpwo.onrender.com", {
+const socket = io("https://linkdinproject.onrender.com", {
   withCredentials: true,
 });
 
