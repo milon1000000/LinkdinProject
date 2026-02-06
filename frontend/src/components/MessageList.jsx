@@ -32,7 +32,7 @@ if(!selectedUser){
   )
 }
 
-export default MessageList
+export default MessageList;
 
 
 
