@@ -50,7 +50,7 @@ function MessageList({ selectedUser, onBack }) {
   }
 
   return (
-    <div className="w-full h-16 px-6 flex items-center justify-between border-b border-gray-200 sm:w-4/5 sm:pt-30">
+    <div className="w-full h-16 px-6 flex justify-between pt-24 ">
       
       {/* Back button for small devices */}
       <div className="flex items-center gap-4 sm:hidden">
