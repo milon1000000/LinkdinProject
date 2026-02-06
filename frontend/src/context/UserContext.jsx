@@ -2,7 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import { authDataContext } from "./AuthContext";
 import axios from "axios";
 import { io } from "socket.io-client";
-export let socket = io("https://linkedin-backend-fpwo.onrender.com");
+export let socket = io("https://linkdinproject.onrender.com");
 import { useNavigate } from "react-router-dom";
 export const userDataContext = createContext();
 function UserContext({ children }) {
