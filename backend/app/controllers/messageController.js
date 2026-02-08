@@ -58,17 +58,22 @@ export const sendMessageController = async (req, res) => {
 
 export const getMessage = async (req, res) => {
   const receiverId = req.params.id;
-  const senderId = req.headers.user_id;
+  const senderId = req.headers.user_id; // frontend must send this
 
+  if (!receiverId || !senderId) {
+    return res.status(400).json({ message: "Missing user IDs", success: false });
+  }
 
   try {
     const conversation = await Conversation.findOne({
       participants: { $all: [senderId, receiverId] },
-    }).populate("message"); // field name must match schema
+    }).populate("message"); // make sure 'message' field name matches schema
 
-    if (!conversation) return res.status(200).json([]);
+    if (!conversation) {
+      return res.status(200).json({ conversation: { message: [] } }); // always return object
+    }
 
-    return res.status(200).json(conversation.message);
+    return res.status(200).json({ conversation }); // frontend can use conversation.message
   } catch (error) {
     if (error instanceof mongoose.Error.CastError) {
       return res.status(400).json({ message: "Invalid Id format", success: false });
