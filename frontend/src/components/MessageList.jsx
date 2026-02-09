@@ -168,7 +168,7 @@ function MessageList({ selectedUser, setSelectedUser }) {
             value={inputData}
             onChange={(e) => setInputData(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSendMessage()}
-            className="flex-1 border-2 rounded-full px-12 py-3 outline-none"
+            className="flex-1 border-2 rounded-full px-8 py-2 outline-none"
           />
 
           <button
