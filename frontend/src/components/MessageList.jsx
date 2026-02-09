@@ -75,7 +75,7 @@ function MessageList({ selectedUser, setSelectedUser }) {
   return (
     <div className="w-full sm:w-4/5 h-full flex flex-col relative pt-28">
       {/* Header */}
-      <div className="flex flex-col items-center gap-4 p-4 pb-6 border-b sticky top-0 bg-white z-10">
+      <div className="flex flex-col items-center gap-4 p-4 pb-6 sticky top-0 bg-white z-10">
         <div className="w-12 h-12 rounded-full overflow-hidden">
           <img
             src={selectedUser.profileImage?.url || dp}
