@@ -70,7 +70,14 @@ function MessageList({ selectedUser, setSelectedUser }) {
     scrollToBottom();
   }, [getMessages]);
 
-  if (!selectedUser) return null;
+  if (!selectedUser) {
+    return (
+      <div className="flex-1 flex items-center justify-center text-gray-400">
+        {" "}
+        Select a user to start chat{" "}
+      </div>
+    );
+  }
 
   return (
     <div className="w-full sm:w-4/5 h-full flex flex-col relative pt-28">
@@ -149,7 +156,7 @@ function MessageList({ selectedUser, setSelectedUser }) {
         <div className="max-w-3xl mx-auto flex items-center gap-2 relative">
           {/* Back button inside input */}
           <button
-            className="md:hidden absolute left-3 top-1/2 transform -translate-y-1/2 text-2xl text-gray-700"
+            className="absolute left-3 top-1/2 transform -translate-y-1/2 text-2xl text-gray-700"
             onClick={() => setSelectedUser(null)}
           >
             <IoArrowBack />
