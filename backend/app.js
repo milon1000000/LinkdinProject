@@ -26,14 +26,14 @@ const app = express();
 let server = http.createServer(app);
 export const io = new Server(server, {
   cors: {
-    origin: "https://linkdinproject-frontend.onrender.com",
+    origin: "https://linkdinproject-1.onrender.com",
     credentials: true,
   },
 });
 // App Use Default Middleware
 app.use(
   cors({
-    origin: "https://linkdinproject-frontend.onrender.com",
+    origin: "https://linkdinproject-1.onrender.com",
     credentials: true,
   }),
 );
